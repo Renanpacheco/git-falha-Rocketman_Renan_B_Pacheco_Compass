@@ -89,6 +89,18 @@ describe('teste multiplicação',()=>{
             let resultado= Calculadora.divisao('a','b')
             expect(resultado).to.be.equals('erro')
         })
+        it("deve dividirr a / 5 com resultado erro", ()=>{
+            let resultado= Calculadora.divisao('a',5)
+            expect(resultado).to.be.equals('erro')
+        })
+        it("deve multiplicar 4 / b com resultado erro", ()=>{
+            let resultado= Calculadora.divisao(4,'b')
+            expect(resultado).to.be.equals("erro")
+        })
+        it("deve multiplicar 4 / 0 com resultado não é possivel dividir por 0", ()=>{
+            let resultado= Calculadora.divisao(4, 0)
+            expect(resultado).to.be.equals("não é possivel dividir por 0")
+        })
     
         it("deve dividir -4 / 5 com resultado -0.8", ()=>{
             let resultado= Calculadora.divisao(-4,5)
