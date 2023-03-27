@@ -110,84 +110,34 @@ describe('teste multiplicação',()=>{
     
     })
 
-})
-
-
-
-
-// describe('primeiro teste', ()=>{
-
-//     it('verificar igualdade', ()=>{
-//         let aux=2;
-//         assert.strictEqual(aux,2)
-
-//     })
-//     // it('verificar desigualdade', ()=>{ //verificar erro
-//     //     let aux=3;
-//     //     assert.strictEqual(aux,2)
-
-//     // })
-//     it('verificar desigualdade', ()=>{
-//         let aux=3;
-//         assert.notStrictEqual(aux,2)
-
-//     })
-
-// })
-
-// describe('segundo teste', ()=>{
-
-//     it('verificar igualdade', ()=>{
-//         let aux='carro';
-//         assert.strictEqual(aux,'carro')
-
-//     })
-//     // it('verificar desigualdade', ()=>{
-//     //     let aux=3;
-//     //     assert.strictEqual(aux,2)
-
-//     // })
-//     it('verificar desigualdade', ()=>{
-//         let aux='carro';
-//         assert.notStrictEqual(aux,'charrete')
-
-//     })
+    describe('teste potencia',()=>{
+        it("potencia de 2^5 com resultado ",()=>{
+            let resultado= Calculadora.potencia(2,5)
+            expect(resultado).to.be.equals(32)
+        })
     
-//     it('verificar igualdade de tamanho', ()=>{
-//         let aux='carro';
-//         assert.strictEqual(aux.length,5)
+        it("potencia de a^b com resultado erro", ()=>{
+             let resultado= Calculadora.potencia('a','b')
+             expect(resultado).to.be.equals("erro")
+        })
+    
+        it("potencia de 4^b com resultado erro", ()=>{
+            let resultado= Calculadora.potencia(4,'b')
+            expect(resultado).to.be.equals("erro")
+        })
+        it("potencia de a^5 com resultado erro", ()=>{
+            let resultado= Calculadora.potencia('a',5)
+            expect(resultado).to.be.equals("erro")
+       })
+     
+        it("potencia de -4^4 com resultado 256", ()=>{
+            let resultado= Calculadora.potencia(-4,4)
+            expect(resultado).to.be.equals(256)
+        })
+        it("potencia de -4^5 com resultado -1024", ()=>{
+            let resultado= Calculadora.potencia(-4,5)
+            expect(resultado).to.be.equals(-1024)
+        })
+    })
 
-//     })
-
-// })
-
-//teste chai
-// import assert from 'assert'
-// import chai from 'chai';
-
-// let expect = chai.expect
-
-// describe('primeiro teste', ()=>{
-
-//     it('verificar igualdade', ()=>{
-//         let aux=2;
-//         expect(aux).to.be.equals(2)
-//         expect(aux).to.be.a('number')
-
-//     })
-//     it('verificar desigualdade', ()=>{ //verificar erro
-//          let aux=3;
-//          //expect(aux).to.be.equals(2) // erro de valor
-//          //expect(aux).to.be.a('number') // verificar o erro de valor
-
-//          expect(aux).to.be.equals(3)
-//          expect(aux).to.be.a('string')
-
-//     })
-//     it.only('verificar desigualdade', ()=>{
-//         let aux=3;
-//         expect(aux).not.equals(2)
-
-//     })
-
-// })
+})

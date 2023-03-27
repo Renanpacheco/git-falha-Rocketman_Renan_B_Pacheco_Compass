@@ -30,6 +30,14 @@ export default class Calculadora{
             return x/y;
         }
     }
+
+    static potencia(x,y){
+        if(verificarEntradaDeTexto(x,y)){
+            return "erro";
+        }else{
+            return x**y;
+        }
+    }
 }
 
 function verificarEntradaDeTexto(x,y){
